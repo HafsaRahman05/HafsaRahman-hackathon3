@@ -18,7 +18,7 @@ const apiVersion = process.env.SANITY_API_VERSION || '2025-01-15'; // Set a defa
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'; // Default to 'production' if not found
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'sk0y5NhCPQBVOIJGjWtDrohFxzfyTPju9ZAx6qgJX7YVzNhuQ8Doaps5hdP51YFXdUGKEIKwarRgRDudVajtxBiK41EAkzVZxV4GFhFeajL7ZTeOWBkJDgRge9udRwmryQWSCFwNqH3HGllBkoBAcvEvSI77JcyX5Ag8MCCgjkdpvSv5KkJs'; // Default project ID if not found
 
-import {schema} from './src/sanity/schemaTypes'
+import {schema} from './src/sanity/schemaTypes/index'
 import {structure} from './src/sanity/structure'
 
 export default defineConfig({
