@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  overflow-x: hidden;
+ }
+ .banner-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #f4f4f4;
+   position: relative;
+   max-width: 100%;
+   padding-inline: 20%;
+   margin: auto;
+   overflow: hidden; /* Hide sliding content initially */
+   height: 80vh; /* Set the height of the banner */
+ }
+ 
+ .content {
+   max-width: 500px;
+   margin-right: 30px;
+   opacity: 0; /* Initially hidden */
+   transform: translateX(-100px); /* Initially off-screen */
+   transition: opacity 1s ease, transform 1s ease;
+   
+ }
+ 
+ .tagline {
+   color: #d63384;
+   font-size: 14px;
+   margin-bottom: 10px;
+ }
+ 
+ .headline {
+   color: #2e2e4e;
+   font-size: 36px;
+   margin-bottom: 20px;
+ }
+ 
+ .description {
+   color: #555;
+   font-size: 16px;
+   margin-bottom: 30px;
+ }
+ 
+ .shop-button {
+   background-color: #d63384;
+   color: #fff;
+   padding: 12px 24px;
+   border: none;
+   border-radius: 5px;
+   font-size: 16px;
+   cursor: pointer;
+ }
+ .lamp_img{
+   width: 20vw;
+   height: 20vw;
+ }
+ .shop-button:hover {
+   background-color: #bb2872;
+ }
+ 
+ .image-container {
+   opacity: 0; /* Initially hidden */
+   transform: translateX(100px); /* Initially off-screen */
+   transition: opacity 1s ease, transform 1s ease;
+ }
+ 
+ .slide-image {
+   max-width: 300px;
+   height: auto;
+ }
+ 
+ /* Trigger the sliding animation when the component is active */
+ .banner-container .content,
+ .banner-container .image-container {
+   opacity: 1;
+   transform: translateX(0);
+ }
+ 
+ /* Responsive Design */
+ @media (max-width: 768px) {
+   .banner-container {
+     flex-direction: column;
+     text-align: center;
+   }
+ 
+   .content {
+     margin-right: 0;
+     margin-bottom: 20px;
+   }
+ 
+   .image-container img {
+     max-width: 200px;
+   }
+ }
+ .dots-container {
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 10px;
+ }
+ 
+ .dot {
+   width: 12px;
+   height: 12px;
+   background-color: #ccc;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .dot.active {
+   background-color: #333;
+ }
+
+ .discountsofa{
+  margin: auto;
+ }
+
+ .sofaimage{
+  background-image: url(/background.png);
+ }
+ .framemap{
+  border: 0;
+ }
+ 
