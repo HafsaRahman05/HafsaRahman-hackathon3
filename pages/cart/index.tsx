@@ -259,7 +259,7 @@ const CartPage = () => {
   {/* Optional Alert */}
   {shippingCharge === 0 && (
     <script>
-      alert("Please calculate the shipping charges before proceeding to checkout.");
+      alert(`Please calculate the shipping charges before proceeding to checkout.`);
     </script>
   )}
 </div>
