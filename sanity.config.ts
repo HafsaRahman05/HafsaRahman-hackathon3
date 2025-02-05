@@ -7,6 +7,11 @@
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
+import productSchema from './src/sanity/schemas/product';
+
+export const schema = {
+  types: [productSchema],
+};
 
 // Get environment variables directly
 const apiVersion = process.env.SANITY_API_VERSION || '2025-01-15'; // Set a default version if not found
